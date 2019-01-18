@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.CityMapper">
+    <!-- 修改city -->
+    <update id="updatebyId" parameterType="City">
+        update city
+        <trim prefix="set" suffixOverrides=",">
+                areaCode = #{areaCode},
+                schoolCode = #{schoolCode}
+        </trim>
+        where id = #{id}
+    </update>
+</mapper>
